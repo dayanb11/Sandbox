@@ -1,5 +1,5 @@
 <section class="kuku"   [formGroup]="topping">
-  <mat-checkbox formcontrolname="checkme" (click)="clicked($event)">Check me!</mat-checkbox>
+  <mat-checkbox formcontrolname="checkme"  (change)="clicked(MatCheckboxChange)" value="yes" [(ngModel)]="MatCheckboxChange">Check me!</mat-checkbox>
 </section>
 <router-outlet>
 </router-outlet>

@@ -13,10 +13,19 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
    topping= this._formBuilder.group({
     checkme: false});
+  public MatCheckboxChange: Event|undefined;
+   
   clicked(event: Event | undefined) { 
-    alert(event?.AT_TARGET.valueOf)
-    alert ('Function not implemented.');
-   }
+    if (this.MatCheckboxChange?.AT_TARGET.valueOf) {
+      alert('checked');
+    } else {
+      alert('unchecked');
+    }
+
+
+    alert('event' + (event?.AT_TARGET?.toString()));
+    alert('Function not implemented.');
+  }
   
   constructor(private _formBuilder: FormBuilder) {
   }
