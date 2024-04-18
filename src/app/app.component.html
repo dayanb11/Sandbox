@@ -2,5 +2,10 @@
 <h1>Main app screen</h1>
   <mat-checkbox formcontrolname="checkme" (change)="onchange($event)" [(ngModel)]="ischecked">Check me!</mat-checkbox>
 </section>
+<div>
+<button (click)="onsubmit()">root-Submit</button>
+  <app-sub-component (ButtonPressed)="buttonpressed($event)"></app-sub-component>
+</div>
 <router-outlet>
+
 </router-outlet>
